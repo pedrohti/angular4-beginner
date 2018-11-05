@@ -1,0 +1,41 @@
+<label>Name:</label>
+<input type="text" [(ngModel)]="task.name"/>
+<br/>
+<label>Value:</label>
+<input type="text" [(ngModel)]="task.value"/>
+<br>
+<label>Date:</label>
+<input type="text" [(ngModel)]="task.date_launch"/>
+<br>
+<button type="button" (click)="add()">Adicionar</button>
+
+<ul>
+    <li *ngFor="let item of tasks" [myTask]="item">
+      {{item.name}} - {{item.value | formatCurrency}} - {{item.date_launch | formatDate}}
+    </li>
+
+<!-- Criar um comportamento reutilizavel = Diretivas
+    Diretiva é um atributo posto em componentes ou em tags e mudará o comportamento deles
+    Diretiva que altera a estrutura (Ex: ngFor) - Diretiva Estrutural
+    Diretiva que altera a propriedade, usada como atributo (Ex: ngClass)
+-->
+  
+<!-- Interpolação {{}}, Property Bind [] e class x ngClass
+     {{ item.name + ' - ' + item.value }} <br>
+     Calc na Interpolarização: {{2*2}} <br> 
+
+     <li [style.color]="item.value > 5 ? 'green':'red' "
+      *ngFor="let item of tasks"
+      [innerHTML]="item.name + ' - ' + item.value">  Tudo entre [] é property bind
+      {{item.name}} - {{item.value}} 
+  </li>
+  
+  <li class="teste"
+      [ngClass]="{'item-green':item.value>5, 'item-red':item.value<5}"
+      *ngFor="let item of tasks"
+      [innerHTML]="item.name + ' - ' + item.value">
+     {{item.name}} - {{item.value}} 
+  </li> -->
+</ul>
+
+<p myTask></p>

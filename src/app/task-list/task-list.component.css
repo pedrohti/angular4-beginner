@@ -1,0 +1,21 @@
+button {
+    color: white;
+    background-color: black;
+}
+
+ul, li {
+    color: green;
+    font-family: Georgia;
+}
+
+.item-red {
+    color:red;
+}
+
+.item-green {
+    color: green;
+}
+
+.teste {
+    font-size: 20px !important;
+}
