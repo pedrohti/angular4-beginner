@@ -22,10 +22,10 @@ export class MyTaskDirective {
    
    
 
-   @HostListener('click')
+  /*  @HostListener('click')
    onclick() {
      alert(this.myTask)
-   }
+   } */
 
    changeColorTask(){
     //[ngClass]="{'item-green':item.value>5, 'item-red':item.value<5}"
