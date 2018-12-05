@@ -9,9 +9,9 @@ import { Task } from '../task';
 })
 export class TaskListComponent {
   tasks:Array<Task>;
-  
+
   constructor(private taskService:TaskService) {
-    this.taskService.tasks.push({name: 'teste', value: 50, date_launch: '2018-11-06'})
+    //this.taskService.tasks.push({name: 'teste', value: 50, date_launch: '2018-11-06'})
     this.tasks = this.taskService.tasks;
   }
 
